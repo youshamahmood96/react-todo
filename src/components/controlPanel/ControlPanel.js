@@ -6,7 +6,6 @@ import { toggleActive, toggleAll, toggleCompleted,deleteCompleted } from '../../
 import { LoadItemsLeft } from '../LoadTodos';
 const ControlPanel = () => {
     const left = LoadItemsLeft()
-    console.log(left);
     const dispatch =useDispatch()
     const handleAll = () => {
         dispatch(toggleAll())

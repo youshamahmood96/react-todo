@@ -18,8 +18,13 @@ const LoadTodos = () => {
     return showTodos
 };
 export const LoadItemsLeft = () => {
-    const todos = LoadTodos()
+    const todos = useSelector(state => state?state.todoReducer.todos:null)
     const left = todos.filter(todo=>todo.status==='active')
     return left.length 
+}
+export const LoadAllTodos = () => {
+    const todos = useSelector(state => state?state.todoReducer.todos:null)
+    return todos
+
 }
 export default LoadTodos;
